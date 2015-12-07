@@ -2,13 +2,16 @@ package com.scratchy.web;
 
 public class RankEntry {
 
-  private final int count;
+  private int pos;
+
+  private int count;
 
   private final String symbols;
 
   private final String url;
 
-  public RankEntry(int count, String symbols, String url) {
+  public RankEntry(int pos, int count, String symbols, String url) {
+    this.pos = pos;
     this.count = count;
     this.symbols = symbols;
     this.url = url;
@@ -24,5 +27,9 @@ public class RankEntry {
 
   public String getUrl() {
     return url;
+  }
+
+  public int getPos() {
+    return pos;
   }
 }
